@@ -20,10 +20,12 @@
         <dependency>
             <groupId>com.stylefeng</groupId>
             <artifactId>guns-core</artifactId>
+            <version>${guns.version}</version>
         </dependency>
         <dependency>
             <groupId>com.stylefeng</groupId>
             <artifactId>guns-generator</artifactId>
+            <version>${guns.version}</version>
         </dependency>
 
         <!--spring boot依赖-->

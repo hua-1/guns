@@ -1,5 +1,6 @@
 package com.stylefeng.guns;
 
+import com.stylefeng.guns.core.listener.StartApplicationListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -17,7 +18,9 @@ public class GunsApplication {
     private final static Logger logger = LoggerFactory.getLogger(GunsApplication.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(GunsApplication.class, args);
+        SpringApplication app=new SpringApplication(GunsApplication.class);
+        app.addListeners(new StartApplicationListener());
+        app.run(args);
         logger.info("GunsApplication is success!");
     }
 }
